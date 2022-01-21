@@ -1,8 +1,10 @@
 // build your `Resource` model here
 const db = require('../../data/dbConfig.js');
 
- function find(){
-    return db('resources'); 
+ async function find(){
+    const rows = await db('resources'); 
+    return rows;
+   
 }
 
 async function add(changes){
