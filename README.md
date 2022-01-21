@@ -109,8 +109,18 @@ Build an API inside the `api` folder with endpoints for:
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
-
 1. Explain the difference between Relational Databases and SQL.
+
+Ans: A database is refered as relational database if the data is contained in rows and columns format. SQL is a query language which is used to interact with database. A relational database can be modified using SQL.
+
 2. Why do tables need a Primary Key?
+
+Ans: Primary keys represents of each record in the database. They are essential for interacting with database. 
+
 3. What is the name given to a table column that references the Primary Key on another table?
+
+Ans: id 
+
 4. What do we need in order to have a _many to many_ relationship between two tables?
+
+Ans: In order to create a many-to-many relationship between two table we need to have their primary key so that it can be used to refer back to the original table.
