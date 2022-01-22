@@ -25,9 +25,10 @@ async function insert(changes){
     const rows = await db('tasks').where('task_id',id)
     rows.map(entry => {
         entry.task_completed = !!entry.task_completed;
+        delete entry.task_id
         return entry;
     })
-    return rows
+    return rows[0]
     
 }
 module.exports = {

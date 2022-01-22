@@ -8,7 +8,7 @@ async function find(){
         entry.project_completed = !!entry.project_completed;
         return entry;
     })
-   
+   console.log(rows)
     return rows;
 }
 async function insert(changes){
@@ -17,9 +17,11 @@ async function insert(changes){
 
     rows.map(entry => {
         entry.project_completed = !!entry.project_completed;
+        delete entry.project_id;
         return entry;
     })
-    return rows;
+    
+    return rows[0];
 }
 module.exports = {
     find,
